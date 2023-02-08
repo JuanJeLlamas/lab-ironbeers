@@ -5,12 +5,14 @@
     
     {{#each this.beers}}
 
-<div>
+{{!-- <div>
      
      <li>  Nombre: {{this.name}} <img src="{{this.image_url}}" alt="beer-image" width="80px">  </li>
      <p> Descripcion: {{this.description}} </p>
      <p> {{this.tagline}}</p>
-</div>
+</div> --}} 
+   <li> {{>beerpartial}}</li>
+
     {{/each}}
 
 
