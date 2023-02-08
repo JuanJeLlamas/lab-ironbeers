@@ -56,9 +56,19 @@ punkAPI.getRandom()
 })
 
 app.get("/beername/:beer", (req , res) => {
-console.log(req.params.beer)
-res.render("beerByName.hbs")
+
+punkAPI.getBeer(3)
+.then((response)=>{
+  console.log(response)
+  res.render("beerByName.hbs", {
+    beername: response
+  })
+
 })
+
+
+})
+
 
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
